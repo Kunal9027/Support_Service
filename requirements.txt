@@ -1,0 +1,9 @@
+Django==5.2.4
+django-cors-headers==4.7.0
+djangorestframework==3.16.0
+faiss-cpu==1.11.0.post1
+langchain-huggingface
+langchain-community
+langchain-core
+langchain-openai
+langchain-groq
