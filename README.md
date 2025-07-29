@@ -3,23 +3,46 @@
 A fully functional **AI-powered customer support system** that simulates how modern companies handle user queries using **RAG (Retrieval-Augmented Generation)**, **LLMs**, and **Memory**. This project showcases advanced backend and frontend integration using **React**, **Groq API**, **Django REST Framework**, **LangChain**, and **Embeddings models**.
 
 ---
+## 🛠️ Setup Guide
 
-## 📺 Demo
+### 🔧 Backend (Django)
 
-🌐 **Live Demo Frontend**: [https://ai-support-demo.netlify.app](https://ai-support-demo.netlify.app)  
-⚙️ **Backend API**: [https://ai-support-backend.onrender.com](https://ai-support-backend.onrender.com)
+```bash
+cd backend
+pip install -r requirements.txt
+python manage.py runserver
+```
+
+### Set up .env file with:
+```
+OPENAI_API_KEY=your_key
+GROQ_API_KEY=your_key
+```
+### Frontend (React)
+```
+cd frontend
+npm install
+npm run dev
+```
+
 
 ---
 
-## 🖼️ Screenshots
+## 📜 How It Works
 
-### 🔍 User asks a query
-![Query Screenshot](assets/query.png)
+1. **FAQ Upload & Embedding**
+   - FAQs are embedded using OpenAI and stored in FAISS vector DB.
 
-### 📄 AI-generated response with context
-![Response Screenshot](assets/response.png)
+2. **User Query**
+   - User enters a question on the frontend.
+   - Query is embedded and compared to stored vectors.
 
-> _Place your actual screenshots in a folder named `assets/` in your GitHub repo_
+3. **RAG + Memory**
+   - Relevant context is passed to Groq LLM using LangChain.
+   - Memory stores previous chat for continuity.
+
+4. **Response**
+   - LLM returns answer based on context + history.
 
 ---
 
@@ -48,5 +71,15 @@ A fully functional **AI-powered customer support system** that simulates how mod
 
 ---
 
-## 📦 Project Structure
+## 🙋‍♂️ Why I Built This
 
+This project is part of my personal journey to become a **Full-Stack AI Developer**.
+
+I built this to:
+
+- Demonstrate my **end-to-end skills** — from backend API development to frontend UI design
+- Apply **AI/ML tools** like LangChain, Groq API, and OpenAI embeddings in a real-world use case
+- Learn how to deploy and host a live service using **Render** and **Netlify**
+- Explore production concerns like **uptime, caching, security, and scalability**
+
+Although I’m still learning, but  I can already build and ship real applications that could serve actual businesses. I continue to improve the system by adding better **security**, **performance**, and **error handling** features.
